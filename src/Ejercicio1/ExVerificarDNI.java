@@ -9,8 +9,8 @@ public class ExVerificarDNI extends RuntimeException {
 
 		@Override
 		public String getMessage() {
-			// TODO Auto-generated method stub
-			return "Ingreso invádildo de caracteres, intente nuevamente";
+
+			return "Ingreso inválido de caracteres, intente nuevamente";
 		}
 	    
 	    
