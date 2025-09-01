@@ -1,9 +1,11 @@
 package Ejercicio1;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Objects;
 
 public class Persona {
-	
+
+
 	//Variables miembro de clase Persona
 	private String dni;
 	private String nombre;
@@ -75,4 +77,19 @@ public class Persona {
 	     // Si paso ambos IFs, entonces vamos a retornar un true.
 	     return true;
 	 }
+	 
+		//Metodo hashCode
+		public int hashCode() 
+		{
+			return Objects.hash(apellido, direccion, dni, email, fechaNacimiento, genero, nombre, telefono);
+		}
+
+		//Metodo equals (Tomando como criterio diferenciador el DNI)
+		public boolean equals(Object obj) 
+		{
+		    if (this == obj) return true;  
+		    if (obj == null || getClass() != obj.getClass()) return false;  
+		    Persona persona = (Persona) obj;
+		    return Objects.equals(dni, persona.dni);
+		}
 }

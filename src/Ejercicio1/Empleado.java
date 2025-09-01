@@ -1,6 +1,7 @@
 package Ejercicio1;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Empleado extends Persona
 {
@@ -49,11 +50,34 @@ public class Empleado extends Persona
 	
 	
 	@Override
-	public String toString() {
+	public String toString() 
+	{
 	    return super.toString() + 
 	           "\nLegajo: " + legajo + 
 	           "\nPuesto: " + puesto + //Acá agrego los específicos de Empleado
 	    	   "\n";
+	}
+	
+	//Metodo hashCode
+	public int hashCode() 
+	{
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + Objects.hash(legajo, puesto);
+		return result;
+	}
+
+	//Metodo equals (Suma el legajo como criterio diferenciador)
+	public boolean equals(Object obj) 
+	{
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Empleado other = (Empleado) obj;
+		return legajo == other.legajo;
 	}
 	
 	
