@@ -59,17 +59,15 @@ public class Empleado extends Persona
 	}
 	
 	//Metodo hashCode
-	public int hashCode() 
-	{
+	public int hashCode() {
 		final int prime = 31;
 		int result = super.hashCode();
-		result = prime * result + Objects.hash(legajo, puesto);
+		result = prime * result + Objects.hash(legajo);
 		return result;
 	}
 
 	//Metodo equals (Suma el legajo como criterio diferenciador)
-	public boolean equals(Object obj) 
-	{
+	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
 		if (!super.equals(obj))

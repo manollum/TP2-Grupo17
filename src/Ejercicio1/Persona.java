@@ -79,17 +79,19 @@ public class Persona {
 	 }
 	 
 		//Metodo hashCode
-		public int hashCode() 
-		{
-			return Objects.hash(apellido, direccion, dni, email, fechaNacimiento, genero, nombre, telefono);
+		public int hashCode() {
+			return Objects.hash(dni);
 		}
 
-		//Metodo equals (Tomando como criterio diferenciador el DNI)
-		public boolean equals(Object obj) 
-		{
-		    if (this == obj) return true;  
-		    if (obj == null || getClass() != obj.getClass()) return false;  
-		    Persona persona = (Persona) obj;
-		    return Objects.equals(dni, persona.dni);
+		//Metodo equals (Utiliza como criterio diferenciante el DNI)
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			Persona other = (Persona) obj;
+			return Objects.equals(dni, other.dni);
 		}
 }
