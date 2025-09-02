@@ -3,9 +3,9 @@ package Ejercicio1;
 public class Polideportivo implements IinstalacionDeportiva {
 
 	//Variables miembro de la clase
-	public static final int tipoInstancia = 1;
+	private static final int tipoInstancia = 1;
 	
-	//Metodos
+	//Metodo de la Interfaz
 	public int getTipoDeInstalacion() {
 		return tipoInstancia;
 	}
