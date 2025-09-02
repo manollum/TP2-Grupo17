@@ -118,26 +118,34 @@ public class Persona {
 	 }
 	 
 	 
-	 public static boolean exVerificarDNI(String dni)
+	 public static boolean exVerificarDNI(String dni) throws ExVerificarDNI
 	 {
-	     // Si la longitud es distinta de 8, devolvemos falso.
+		 //Bandera. Se asume que la cadena recibida posee formato válido.
+		 boolean formatoValido = true;
+		 
+	     // Si la longitud es distinta de 8, cambiamos el estado de la bandera.
 	     if (dni.length() != 8)
 	     {
-	         return false;
+	         formatoValido = false;
 	     }
 
 	     // Recorremos cada caracter del string.
-	     for (int i = 0; i < dni.length(); i++)
+	     for (int i = 0; i < dni.length() && formatoValido; i++)
 	     {
 	         char c = dni.charAt(i);
 
 	         // esto sería: si es distinto de "ser un número" entonces devolveme falso.
 	         if (!Character.isDigit(c))
 	         {
-	             return false;
+	        	 formatoValido = false;
 	         }
 	     }
 
+	     if(!formatoValido) 
+	     {
+	    	 ExVerificarDNI ex = new ExVerificarDNI();
+	    	 throw ex;
+	     }
 	     // Si paso ambos IFs, entonces vamos a retornar un true.
 	     return true;
 	 }
