@@ -1,50 +1,35 @@
 package Ejercicio2;
 
-public class EdificioDeOficina implements Edificio {
+public class EdificioDeOficinas implements Edificio {
     private int numeroDeOficinas;
-    private String nombreEdificio;
-    
-    //Constructor vacío
-    public EdificioDeOficina()
-    {
+
+    // Constructor vacío
+    public EdificioDeOficinas() {
     }
-    
-    public EdificioDeOficina(String nombreEdificio, int numeroDeOficinas) {
-        this.nombreEdificio = nombreEdificio;
+
+    // Constructor con parámetros
+    public EdificioDeOficinas(int numeroDeOficinas) {
         this.numeroDeOficinas = numeroDeOficinas;
     }
 
-    //Getters y setters 
-        
+    // Getter y Setter
     public int getNumeroDeOficinas() {
-		return numeroDeOficinas;
-	}
-
-	public void setNumeroDeOficinas(int numeroDeOficinas) {
-		this.numeroDeOficinas = numeroDeOficinas;
-	}
-
-	public String getNombreEdificio() {
-		return nombreEdificio;
-	}
-
-	public void setNombreEdificio(String nombreEdificio) {
-		this.nombreEdificio = nombreEdificio;
-	}
-	
-	
-
-	
-	@Override
-	public String toString() {
-		return "Oficinas:" + numeroDeOficinas + ", del edificio:" + nombreEdificio;
-	}
-
-	//metodo que hay que desarrollar por implementar la interface Edificio
-	@Override
-    public double getSuperficieEdificio() {
-        return 0; 
+        return numeroDeOficinas;
     }
-    
-    
+
+    public void setNumeroDeOficinas(int numeroDeOficinas) {
+        this.numeroDeOficinas = numeroDeOficinas;
+    }
+
+    // Método obligatorio de la interfaz Edificio
+    @Override
+    public double getSuperficieEdificio() {
+        return 0.0; // implementado, aunque no sea lo central acá
+    }
+
+    @Override
+    public String toString() {
+        return "Edificio de Oficinas con " + numeroDeOficinas + " oficinas.";
+    }
+}
 }
