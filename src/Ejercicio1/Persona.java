@@ -5,7 +5,6 @@ import java.util.Objects;
 
 public class Persona {
 
-
 	//Variables miembro de clase Persona
 	private String dni;
 	private String nombre;
@@ -117,7 +116,6 @@ public class Persona {
 		 		+ "\nEmail: " + email;
 	 }
 	 
-	 
 	 public static boolean exVerificarDNI(String dni) throws ExVerificarDNI
 	 {
 		 //Bandera. Se asume que la cadena recibida posee formato válido.
@@ -150,20 +148,20 @@ public class Persona {
 	     return true;
 	 }
 	 
-		//Metodo hashCode
-		public int hashCode() {
-			return Objects.hash(dni);
-		}
+	 //Metodo hashCode
+	 public int hashCode() {
+		 return Objects.hash(dni);
+	 }
 
-		//Metodo equals (Utiliza como criterio diferenciante el DNI)
-		public boolean equals(Object obj) {
-			if (this == obj)
-				return true;
-			if (obj == null)
-				return false;
-			if (getClass() != obj.getClass())
-				return false;
-			Persona other = (Persona) obj;
-			return Objects.equals(dni, other.dni);
-		}
+	 //Metodo equals (Utiliza como criterio diferenciante el DNI)
+	 public boolean equals(Object obj) {
+		 if (this == obj)
+			 return true;
+		 if (obj == null)
+			 return false;
+		 if (getClass() != obj.getClass())
+			 return false;
+		 Persona other = (Persona) obj;
+		 return Objects.equals(dni, other.dni);
+	 }
 }

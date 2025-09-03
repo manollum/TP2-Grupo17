@@ -29,10 +29,6 @@ public class MainEjercicio1_a {
 			{
 				System.out.println("Persona no agregada por no verificar el DNI");
 			}
-			
 		}
-		
-
 	}
-
 }

@@ -42,14 +42,12 @@ public class MainEjercicio1_d {
 		
 		System.out.println("Listado de Personas:\n");
 		
-			while(it.hasNext())
-			{
-				Persona persona = it.next();
-				it.remove();
-				
-				System.out.println(persona.toString() + "\n");
-			}
-
+		while(it.hasNext())
+		{
+			Persona persona = it.next();
+			it.remove();
+			
+			System.out.println(persona.toString() + "\n");
+		}
 	}
-
 }
