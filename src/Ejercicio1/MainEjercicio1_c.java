@@ -36,8 +36,8 @@ public class MainEjercicio1_c {
 		Iterator<Empleado> it = listaEmpleados.iterator();
 		while(it.hasNext())
 		{
-			Empleado p = (Empleado) it.next();
-			System.out.println(p.toString());
+			Empleado e = (Empleado) it.next();
+			System.out.println(e.toString());
 		}
 	}
 }
