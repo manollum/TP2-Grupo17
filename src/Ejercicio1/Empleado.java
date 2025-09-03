@@ -3,7 +3,7 @@ package Ejercicio1;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Empleado extends Persona
+public class Empleado extends Persona implements Comparable<Empleado>
 {
 
 	//Variables miembro de clase Empleado
@@ -77,6 +77,18 @@ public class Empleado extends Persona
 		Empleado other = (Empleado) obj;
 		return legajo == other.legajo;
 	}
-	
-	
+
+	@Override
+	public int compareTo(Empleado o) {
+		//Ordenamiento por Legajo de mayor a menor
+		if (o.legajo == this.legajo) {
+			return 0;
+		}
+		
+		if (o.legajo < this.legajo) {
+			return -1;
+		}
+		
+		return 1;
+	}
 }
