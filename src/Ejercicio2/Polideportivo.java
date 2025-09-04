@@ -6,7 +6,7 @@ public class Polideportivo implements IinstalacionDeportiva, Edificio {
 	private static final int tipoInstancia = 1;
 	private String nombre;
 	private double metrosDeLargo;
-    private double metrosDeAncho;
+	private double metrosDeAncho;
     
     //Constructores
     Polideportivo() {
