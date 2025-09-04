@@ -8,9 +8,9 @@ public class MainEjercicio2 {
         ArrayList<Object> lista = new ArrayList<>();
 
         // Mismos objetos que en el Aporte 1
-        lista.add(new Polideportivo());
-        lista.add(new Polideportivo());
-        lista.add(new Polideportivo());
+        lista.add(new Polideportivo("Poli Norte", 45.0, 20.0));
+        lista.add(new Polideportivo("Poli Sur", 60.0, 35.0));
+        lista.add(new Polideportivo("Poli Centro", 50.0, 30.0));
         lista.add(new EdificioDeOficina(120, 60.0, 90.0));
         lista.add(new EdificioDeOficina(90, 50.0, 92.0));
 
@@ -21,7 +21,11 @@ public class MainEjercicio2 {
 
             if (obj instanceof Polideportivo) {
                 Polideportivo p = (Polideportivo) obj;
-                System.out.println("[Polideportivo] tipoInstalacion=" + p.getTipoDeInstalacion());
+                System.out.println("[Polideportivo] nombre:" + p.getNombre()
+                		+ ", superficie=" + p.getSuperficieEdificio()
+                		+ "m2, largo=" + p.getMetrosDeLargo()
+                		+ "m, ancho=" + p.getMetrosDeAncho()
+                		+ "m");
             } else if (obj instanceof EdificioDeOficina) {
                 EdificioDeOficina e = (EdificioDeOficina) obj;
                 System.out.println("[EdificioDeOficina] superficie=" + e.getSuperficieEdificio()
