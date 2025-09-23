@@ -81,14 +81,14 @@ public class Empleado extends Persona implements Comparable<Empleado>
 	@Override
 	public int compareTo(Empleado o) {
 		//Ordenamiento por Legajo de mayor a menor
-		if (o.legajo == this.legajo) {
+		if (this.getDni().equals(o.getDni())) {
 			return 0;
-		}
-		
-		if (o.legajo < this.legajo) {
-			return -1;
-		}
-		
-		return 1;
+		} else if (this.getDni().compareTo(o.getDni()) < 0) {
+
+	        return -1;
+
+	    } else {
+	        return 1;
+	    }
 	}
 }
